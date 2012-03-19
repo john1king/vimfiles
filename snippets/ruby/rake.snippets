@@ -1,0 +1,6 @@
+snippet desc
+	desc "${1:Task description\}"
+snippet task
+	task :${1:task_name => [:dependent, :tasks]} do
+		${2}
+	end

@@ -1,0 +1,28 @@
+snippet b
+	{ |${1:x}| ${2} }
+snippet y
+	:yields: ${1:arguments}
+snippet zip
+	zip(${1:enums}) { |${2:row}| ${3} }
+snippet upt
+	upto(${1:1.0/0.0}) { |${2:n}| ${3} }
+snippet loo
+	loop { ${1} }
+snippet inj
+	inject(${1:init}) { |${2:mem}, ${3:var}| ${4} }
+snippet sort
+	sort { |a, b| ${1} }
+snippet sort_by
+	sort_by { |${1:e}| ${2} }
+snippet grep
+	grep(${1:/pattern/}) { |${2:match}| ${3} }
+snippet sub
+	${1:g}sub(${2:/pattern/}) { |${3:match}| ${4} }
+snippet scan
+	scan(${1:/pattern/}) { |${2:match}| ${3} }
+snippet lam
+	lambda { |${1:args}| ${2} }
+snippet do
+	do |${1:variable}|
+		${2}
+	end

@@ -1,0 +1,39 @@
+snippet fl
+	flunk("${1:Failure message.}")${2}
+# Benchmark.bmbm do .. end
+snippet bm-
+	TESTS = ${1:10_000}
+	Benchmark.bmbm do |results|
+		${2}
+	end
+snippet defd
+	def_delegator :${1:@del_obj}, :${2:del_meth}, :${3:new_name}
+snippet defds
+	def_delegators :${1:@del_obj}, :${2:del_methods}
+snippet am
+	alias_method :${1:new_name}, :${2:old_name}
+snippet array
+	Array.new(${1:10}) { |${2:i}| ${3} }
+snippet hash
+	Hash.new { |${1:hash}, ${2:key}| $1[$2] = ${3} }
+snippet file
+	File.read(${1:"path/to/file"})${2}
+# unix_filter {}
+snippet unif
+	ARGF.each_line${1} do |${2:line}|
+		${3}
+	end
+# include Enumerable
+snippet Enum
+	include Enumerable
+
+	def each(&block)
+		${1}
+	end
+# include Comparable
+snippet Comp
+	include Comparable
+
+	def <=>(other)
+		${1}
+	end
